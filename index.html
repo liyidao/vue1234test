@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		<style>
+			/*底部开始*/
+			body {
+				/*把.dibu的父级元素body的边距设置为0就好了*/
+				margin:0px;
+			}
+			.dibu {
+				/*放在底部*/
+				/*https://www.jb51.net/css/653990.html 方法一*/
+				width: 100%;
+				position: absolute;
+				bottom: 0
+			}
+
+			.beian {
+				/*负责位置*/
+				width: 100%;
+				margin:0;
+				font-size: small;
+				color: gray;
+			}
+
+			.content {
+				/*适配*/
+				position: absolute;
+				left: 50%;
+				margin-left: -120px;
+				width: 300px;
+				/*width的一半 */
+			}
+
+			.beianLianJie:link {
+				/* 未访问的链接 */
+				color: blue;
+			}
+
+			.beianLianJie:visited {
+				/* 已访问的链接 */
+				color: blue;
+			}
+
+			.beianLianJie:hover {
+				/* 鼠标移动到链接上 */
+				color: blue;
+			}
+
+			.beianLianJie:active {
+				/* 选定的链接，即鼠标按下去的时候不松开显示的状态 */
+				color: blue;
+			}
+			/*底部结束*/
+		</style>
+	</head>
+	<!--
+	beian = 备案
+	content 用来做适配的类
+	beianLianJie=备案链接
+	dibu=底部
+	-->
+	<body>
+		<h1>hello vue1234</h1>
+		<!--底部开始-->
+		<div class="dibu">
+			<div class="beian">
+				<div class="content">
+					<span>备案号：</span>
+					<a class="beianLianJie" href="https://beian.miit.gov.cn" target="_blank" style="text-decoration:none;">辽ICP备2020014657号-1</a>
+				</div>
+			</div>
+
+			<div style="width:300px;margin:0 auto; padding:20px 0;">
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21010602000529" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+					 src="img/beian.png" style="float:left;" />
+					<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">辽公网安备 21010602000529号</p>
+				</a>
+			</div>
+		</div>
+		<!--底部结束-->
+	</body>
+</html>
